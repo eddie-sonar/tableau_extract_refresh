@@ -22,3 +22,7 @@ SERVER_URL="dub01.online.tableau.com"
 Run
 
 `bash refresh_all_extracts.sh`
+
+This will run two different python scripts in order: 1. `get_jobs.py` 2. `refresh_all_extracts.py`.
+
+`get_jobs.py` will get a list of all the jobs run in the last 2 days and save it to `data.json`. From there `refresh_all_extracts.py` will get all the data sources that have extracts from `data.json` and run their respective extract job.
