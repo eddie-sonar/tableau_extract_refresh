@@ -30,7 +30,6 @@ def _check_status(server_response, success_code):
         detail = detail_element.text if detail_element is not None else 'unknown detail'
         error_message = '{0}: {1} - {2}'.format(code, summary, detail)
         raise ApiCallError(error_message)
-    return
 
 def _encode_for_display(text):
     """
