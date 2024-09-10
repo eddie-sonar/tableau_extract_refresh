@@ -86,9 +86,7 @@ def sign_out(server, auth_token):
     url = "https://" + server + "/api/{0}/auth/signout".format(VERSION)
     server_response = requests.post(url, headers={'x-tableau-auth': auth_token}, verify=False)
     _check_status(server_response, 204)
-    print("hi")
-    return
-
+    print("hi") 
 
 def get_jobs(server, auth_token, site_id, date=None):
     """
